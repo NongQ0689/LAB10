@@ -30,11 +30,11 @@ int main(){
 	cout << setw(13) << left << loan;				//PrevBalance 
 	cout << setw(13) << left << loan/100*rate;		//Interest     
 	cout << setw(13) << left << loan*(1+rate/100);	//Total 
-	
-	if(loan<pay) pay=loan*(1+rate/100) ; 
+
+	if(loan*(1+rate/100)<pay) pay=loan*(1+rate/100) ; 
 	cout << setw(13) << left << pay;				//Payment
 
-	loan = loan*(1+rate/100)-pay;		
+	loan = loan*(1+rate/100)-pay;	
 	cout << setw(13) << left << loan;				//NewBalance 
 	i++;
 	cout << "\n";	
